@@ -1,7 +1,7 @@
 library(coloc)
 library(data.table)
 
-setwd("Projects/susie_coloc_data/01_marc_test/")
+setwd("~/Projects/susie_coloc_data/01_marc_test/")
 t1=fread("CARMA_finemapping_cd4_test.txt",data.table=FALSE)
 t2=fread("finemapping_cd4_test_v2.txt",data.table=FALSE)
 

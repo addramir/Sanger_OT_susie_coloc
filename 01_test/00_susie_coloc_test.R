@@ -38,6 +38,17 @@ class(S4_test)="susie"
 
 res_test=coloc.susie(S3_test,S4_test)
 res_test$summary
+
+S3_1=S3_test
+S3_1$lbf_variable[1,]=S3_1$lbf_variable[1,]
+S3_1$lbf_variable[1,-S3_1$sets$cs$L1]=-1000
+S3_1$lbf_variable[2,-S3_1$sets$cs$L2]=-1000
+S4_1=S4_test
+S4_1$lbf_variable[1,]=S4_1$lbf_variable[1,]
+res_test1=coloc.susie(S3_1,S4_1)
+res_test1$summary
+res_test$summary
+
 table(susie.res0$results==res_test$results)
 
 
