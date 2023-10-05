@@ -21,7 +21,7 @@ for (i in 1:length(lst)){
 }
 
 summary(out[,2])
-ind=which(out[,2]<0.9999 & out[,2]>0.95)
+ind=which(out[,2]<=1 & out[,2]>0.95)
 out_finn=out[ind,]
 summary(out_finn[,2])
 
@@ -47,7 +47,7 @@ for (i in 1:length(lst)){
 }
 
 summary(out[,2])
-ind=which(out[,2]<0.9999 & out[,2]>0.95)
+ind=which(out[,2]<=1 & out[,2]>0.95)
 out_saige=out[ind,]
 summary(out_saige[,2])
 
